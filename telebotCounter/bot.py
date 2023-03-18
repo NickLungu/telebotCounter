@@ -74,7 +74,7 @@ async def inline_echo(inline_query: types.InlineQuery):
                     id='1',
                     title='Valid format! Click here to calculate :)',
                     input_message_content=types.InputTextMessageContent(
-                        f'{difference["days"]} day, {difference["hours"]} hour, {difference["minutes"]} minute'
+                        f'{title}: {difference["days"]} day, {difference["hours"]} hour, {difference["minutes"]} minute'
                     )
                 )
             else:
@@ -111,7 +111,7 @@ async def inline_echo(inline_query: types.InlineQuery):
                     id= result_id,
                     title=f'{title} ({res[0]}-{res[1]}-{res[2]}-{res[3]}-{res[4]})',
                     input_message_content=types.InputTextMessageContent(
-                        f'Time left: {difference["days"]} day, {difference["hours"]} hour, {difference["minutes"]} minute'
+                        f'{title}: {difference["days"]} day, {difference["hours"]} hour, {difference["minutes"]} minute'
                     )
                 )
             )

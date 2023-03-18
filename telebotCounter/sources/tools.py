@@ -42,6 +42,7 @@ def parse_query(query):
         splitted = date_point.split('-')
         return True, date_point, title, splitted
     except:
+        print("debug: wrong format")
         return False, None, None, None
 
 
